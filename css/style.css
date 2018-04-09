@@ -1,0 +1,100 @@
+li {
+  padding-bottom: 1em;
+}
+
+ol {
+  padding-left: 0;
+  padding-top: 1em;
+}
+
+ol.first {
+  list-style-type: none;
+}
+
+ol.second {
+  margin: 0;
+  padding: 0;
+}
+
+ol.second > li {
+  display: table;
+  counter-increment: second;
+  list-style-type: none;
+}
+
+ol.second > li:before {
+  content: counter(second, decimal) ". ";
+  display: table-cell;
+  padding-right: 0.5in;    
+}
+
+ol.third {
+  counter-reset: third;
+}
+
+ol.third > li {
+  display: table;
+  counter-increment: third;
+}
+
+ol.third > li:before {
+  content: counter(third, lower-latin) ". ";
+  padding-right: 0.5in;
+  display: table-cell;
+}
+
+ol.fourth {
+  counter-reset: fourth;
+  padding-left: 0.6in;
+}
+
+ol.fourth > li {
+  display: table;
+  counter-increment: fourth;
+}
+
+ol.fourth > li:before {
+  content: '('counter(fourth)')';
+  padding-right: 0.43in;
+  display: table-cell;
+}
+
+ol.fifth {
+  counter-reset: fifth;
+}
+
+ol.fifth > li {
+  display: table;
+  counter-increment: fifth;
+}
+
+ol.fifth > li:before {
+  content: '('counter(fifth, lower-alpha)')';
+  padding-right: 0.43in;
+  display: table-cell;
+}
+
+ol.sixth {
+  counter-reset: sixth;
+}
+
+ol.sixth > li {
+  display: table;
+  counter-increment: sixth;
+}
+
+ol.sixth > li:before {
+  content: '('counter(sixth)')';
+  padding-right: 0.43in;
+  display: table-cell;
+}
+
+span.sectionheader {
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: inline
+}
+
+span.paraheader {
+  text-decoration: underline;
+}
